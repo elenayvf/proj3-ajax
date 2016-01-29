@@ -89,17 +89,21 @@ def calc_times():
   intclose = 0
   finished = "Race not yet finished"
   
+  if (control < 0):
+  	finished = "Not a valid control distance."
+  	intopen = 0
+  	intclose = 0
   if (units=='miles'):
   	control = control * 1.60934
   #race is finished 
   if (control == 0):
   	intclose += 1
-  if (control >= brevdist):
+  if (0 < control >= brevdist):
   	intopen  =finished_open[brevdist]
   	intclose =finished_close[brevdist]
   	finished = "Race is Finished!" 
   #control < brevdist
-  elif control < brev_list[0][0]:
+  elif 0 < control < brev_list[0][0]:
   	intopen += control/(brev_list[0][2])
   	intclose += control/(brev_list[0][1])
   else:
