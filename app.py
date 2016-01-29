@@ -103,7 +103,7 @@ def calc_times():
   	intclose =finished_close[brevdist]
   	finished = "Race is Finished!" 
   #control < brevdist
-  elif 0 < control < brev_list[0][0]:
+  elif (0 < control < brev_list[0][0]):
   	intopen += control/(brev_list[0][2])
   	intclose += control/(brev_list[0][1])
   else:
