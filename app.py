@@ -22,7 +22,6 @@ from dateutil import tz  # For interpreting local times
 # Our own module
 # import acp_limits
 
-
 ###
 # Globals
 ###
